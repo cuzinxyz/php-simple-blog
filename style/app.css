@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  color: #666;
+  font-family: Segoe UI, Consolas, monospace, Microsoft YaHei;
+  font-weight: lighter;
+}
+input,
+button,
+select,
+textarea {
+  font: inherit;
+}
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+/* remove animation for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+a:hover {
+  color: #cd3f45;
+}
+#wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 600px;
+}
+
+#header_ {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.blog_title {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.options {
+  text-align: center;
+  padding: 0;
+  overflow: hidden;
+}
+.option {
+  display: inline-block;
+  list-style: none;
+  text-transform: capitalize;
+  margin: 0 5px;
+}
+
+.body_ {
+  margin-top: 50px;
+}
+
+.Articles_items {
+  margin: 16px 0;
+}
+
+.Articles__item {
+  position: relative;
+  padding-left: 140px;
+  line-height: 80px;
+  list-style: none;
+  border-top: 1px dashed #eee;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.Articles__item-date {
+  position: absolute;
+  left: 0;
+  font-size: 14px;
+  color: hsla(0, 0%, 40%, 0.6);
+}
+.Articles__item-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+.blog_footer {
+  margin-bottom: 100px;
+}
+
+.Article__header {
+  padding: 30px 0;
+  margin-bottom: 30px;
+  border-bottom: 1px dashed #eee;
+}
+.Article__title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: lighter;
+}
+.Article__details {
+  margin-top: 20px;
+  color: hsla(0, 0%, 40%, 0.6);
+  font-size: 14px;
+  overflow: hidden;
+}
+.Article__date {
+  float: left;
+}
+.Article__footer {
+  padding: 30px 0;
+  margin-top: 30px;
+  border-top: 1px dashed #eee;
+}
+.Article__reply {
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid hsla(0, 0%, 40%, 0.6);
+}
