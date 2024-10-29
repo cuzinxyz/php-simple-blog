@@ -62,7 +62,7 @@ if(!$user->is_logged_in()){ header('Location: login.php'); }
 
 				if(isset($password)){
 
-					$hashedpassword = $user->password_hash($password, PASSWORD_BCRYPT);
+					$hashedpassword = password_hash($password, PASSWORD_BCRYPT);
 
 					//update into database
 					$stmt = $db->prepare('UPDATE blog_members SET username = :username, password = :password, email = :email WHERE memberID = :memberID') ;
