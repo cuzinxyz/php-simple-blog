@@ -2,7 +2,7 @@
 require_once('../includes/config.php');
 
 //if not logged in redirect to login page
-if(!$user->is_logged_in()){ header('Location: login.php'); }
+// if(!$user->is_logged_in()){ header('Location: login.php'); }
 ?>
 <!doctype html>
 <html lang="en">
@@ -52,10 +52,9 @@ if(!$user->is_logged_in()){ header('Location: login.php'); }
 
 		if(!isset($error)){
 
-			$hashedpassword = $user->password_hash($password, PASSWORD_BCRYPT);
+			$hashedpassword = password_hash($password, PASSWORD_BCRYPT);
 
 			try {
-
 				//insert into database
 				$stmt = $db->prepare('INSERT INTO blog_members (username,password,email) VALUES (:username, :password, :email)') ;
 				$stmt->execute(array(
@@ -64,7 +63,6 @@ if(!$user->is_logged_in()){ header('Location: login.php'); }
 					':email' => $email
 				));
 
-				//redirect to index page
 				header('Location: users.php?action=added');
 				exit;
 
